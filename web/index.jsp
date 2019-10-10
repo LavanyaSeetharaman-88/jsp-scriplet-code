@@ -13,16 +13,24 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <%-- Expression and declaration, to make work uncomment below block 
+     <div
+     <h2><%!int count=0;%>
+             Page Visit Counter <%=++count%></h2>
+      </div>
+            
+        --%>
+        <%-- Scriplet Block , to make work uncomment below block 
         <div
-            <h2>Page Visit Counter <%out.println(Counter.getCount());%></h2>
-        </div>
-            <form action="NewServlet" method="POST">
-  First name:<br>
-  <input type="text" name="firstname" value=""><br>
-  Last name:<br>
-  <input type="text" name="lastname" value=""><br><br>
-  <input type="submit" value="Submit">
-    </form>
+     <h2><%int count=0;%>
+             Page Visit Counter <%=++count%></h2>
+      </div>
+        --%>
         
+        <%-- using Class member--%>
+         <div
+     <h2>
+             Page Visit Counter <%out.println(Counter.getCount());%></h2>
+      </div>
     </body>
 </html>
